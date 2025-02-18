@@ -1,0 +1,23 @@
+private void cmbCurrencyActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        int index = cmbCurrency.getSelectedIndex();
+        if (txtPeso.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(this, "Please enter a peso value... ");
+        }
+        else
+        {
+            double pesoAmt = Double.parseDouble(txtPeso.getText());
+            double convertAmt=0;
+            
+            if(index == 1)
+            {   convertAmt = pesoAmt * 0.020574;}
+            if(index == 2)
+            {   convertAmt = pesoAmt * 2.237407;}
+            if(index == 3)
+            {   convertAmt = pesoAmt * 0.014871;}
+            if(index == 4)
+            {   convertAmt = pesoAmt * 0.017253;}
+            
+            txtConvertedAmount.setText(String.valueOf(convertAmt));
+        }
+    } 
