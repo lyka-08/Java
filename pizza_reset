@@ -1,0 +1,51 @@
+private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        buttonGroup1.clearSelection();
+        buttonGroup2.clearSelection();
+        
+        // Clear all topping checkboxes
+        chkPepperoni.setSelected(false);
+        chkExtraCheese.setSelected(false);
+        chkMushroom.setSelected(false);
+        chkHam.setSelected(false);
+        chkBacon.setSelected(false);
+        chkGroundBeef.setSelected(false);
+        chkJalapeno.setSelected(false);
+        chkPineapple.setSelected(false);
+        chkDriendShrimps.setSelected(false);
+        chkAnchovies.setSelected(false);
+        chkSunDriedTomatoes.setSelected(false);
+        chkSpinach.setSelected(false);
+        chkRoastedGarlic.setSelected(false);
+        chkShreddedChicken.setSelected(false);
+
+        // Clear other items checkboxes
+        chkChickenWings.setSelected(false);
+        chkPountine.setSelected(false);
+        chkOnionRings.setSelected(false);
+        chkCheesyGarlicBread.setSelected(false);
+
+        // Clear dip checkboxes
+        chkGarlicDip.setSelected(false);
+        chkBBQDip.setSelected(false);
+        chkSourCreamDip.setSelected(false);
+
+        // Clear drinks checkboxes and text fields
+        chkCoke.setSelected(false);
+        chkDietCoke.setSelected(false);
+        chkIcedTea.setSelected(false);
+        chkGingerAle.setSelected(false);
+        chkSprite.setSelected(false);
+        chkRootBeer.setSelected(false);
+        chkWater.setSelected(false);
+
+        txtCoke.setText("");
+        txtDietCoke.setText("");
+        txtIcedTea.setText("");
+        txtGingerAle.setText("");
+        txtSprite.setText("");
+        txtRootBeer.setText("");
+        txtWater.setText("");
+
+        // Optionally, you can display a message confirming the selection was cleared
+        JOptionPane.showMessageDialog(this, "All selections have been cleared!");
+    }
