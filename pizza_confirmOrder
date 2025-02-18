@@ -1,0 +1,154 @@
+private void btnConfirmOrderActionPerformed(java.awt.event.ActionEvent evt) {                                                
+        double amount = 0;
+        StringBuilder orderDetails = new StringBuilder("Your Order is:\n");
+        
+        //Pizza Size
+        if(rbtnSmall.isSelected()){
+            amount=4.00;
+            orderDetails.append("Pizza Size: Small\n");
+        }
+        if(rbtnMedium.isSelected()){
+            amount=7.00;
+            orderDetails.append("Pizza Size: Medium\n");
+        }
+        if(rbtnLarge.isSelected()){
+            amount=10.00;
+            orderDetails.append("Pizza Size: Large\n");
+        }
+        if(rbtnExtraLarge.isSelected()){
+            amount=13.00;
+            orderDetails.append("Pizza Size: Extra Large\n");
+        }
+        
+        //Crust
+        if(rbtnNormal.isSelected()){
+            orderDetails.append("Crust: Normal\n");
+        }
+        if(rbtnCheesy.isSelected()){
+            orderDetails.append("Crust: Cheesy\n");
+        }    
+        if(rbtnSausage.isSelected()){
+            orderDetails.append("Crust: Sausage\n");
+        }
+            
+        //Toppings
+        if(chkPepperoni.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Topping 22\n");
+        }
+        if(chkExtraCheese.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Topping 23\n");
+        }
+        if(chkMushroom.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Mushroom\n");
+        }
+        if(chkHam.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Ham\n");
+        }
+        if(chkBacon.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Bacon\n");
+        }
+        if(chkGroundBeef.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Ground Beef\n");
+        }
+        if(chkJalapeno.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Jalapeno\n");
+        }
+        if(chkPineapple.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Pineapple\n");
+        }
+        if(chkDriendShrimps.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Dried Shrimp\n");
+        }
+        if(chkAnchovies.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Anchovies\n");
+        }
+        if(chkSunDriedTomatoes.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Sun Dried Tomatoes\n");
+        }
+        if(chkSpinach.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Spinach\n");
+        }
+        if(chkRoastedGarlic.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Roasted Garlic\n");
+        }
+        if(chkShreddedChicken.isSelected()){
+            amount+=0.75;
+            orderDetails.append("Toppings: Shredded Chicken\n");
+        }
+        
+        //Other Items
+        if(chkChickenWings.isSelected()){
+            amount+=3.00;
+            orderDetails.append("Other Item: Chicken Wings\n");
+        }
+        if(chkPountine.isSelected()){
+            amount+=3.00;
+            orderDetails.append("Other Item: Poutine\n");
+        }
+        if(chkOnionRings.isSelected()){
+            amount+=3.00;
+            orderDetails.append("Other Item: Onion Rings\n");
+        }
+        if(chkCheesyGarlicBread.isSelected()){
+            amount+=3.00;
+            orderDetails.append("Other Item: Cheesy Garlic Bread\n");
+        }
+        if(chkGarlicDip.isSelected()){
+            amount+=0.00;
+            orderDetails.append("Dip: Garlic Dip\n");
+        }
+        if(chkBBQDip.isSelected()){
+            amount+=0.00;
+            orderDetails.append("Dip: BBQ Dip\n");
+        }
+        if(chkSourCreamDip.isSelected()){
+            amount+=0.00;
+            orderDetails.append("Dip: Sour Cream Dip\n");
+        }
+        
+        //Drinks & Quantity
+        if(chkCoke.isSelected()){
+            amount+=1.45 * Double.parseDouble(txtCoke.getText());
+            orderDetails.append("Drinks: Coke, Quantity: " + txtCoke.getText() + "\n");
+        }
+        if(chkDietCoke.isSelected()){
+            amount+=1.45 * Double.parseDouble(txtDietCoke.getText());
+            orderDetails.append("Drinks: Diet Coke, Quantity: " + txtDietCoke.getText() + "\n");
+        }
+        if(chkIcedTea.isSelected()){
+            amount+=1.45 * Double.parseDouble(txtIcedTea.getText());
+            orderDetails.append("Drinks: Iced Tea, Quantity: " + txtIcedTea.getText() + "\n");
+        }
+        if(chkGingerAle.isSelected()){
+            amount+=1.45 * Double.parseDouble(txtGingerAle.getText());
+            orderDetails.append("Drinks: Ginger Ale, Quantity: " + txtGingerAle.getText() + "\n");
+        }
+        if(chkSprite.isSelected()){
+            amount+=1.45 * Double.parseDouble(txtSprite.getText());
+            orderDetails.append("Drinks: Sprite, Quantity: " + txtSprite.getText() + "\n");
+        }
+        if(chkRootBeer.isSelected()){
+            amount+=1.45 * Double.parseDouble(txtRootBeer.getText());
+            orderDetails.append("Drinks: Root Beer, Quantity: " + txtRootBeer.getText() + "\n");
+        }
+        if(chkWater.isSelected()){
+            amount+=1.23 * Double.parseDouble(txtWater.getText());
+            orderDetails.append("Drinks: Water, Quantity: " + txtWater.getText() + "\n");
+        }
+
+        
+        JOptionPane.showMessageDialog(this, orderDetails.toString() + "\nTotal Amount to Pay: $" + amount + "\nThank you <3");
+    }
