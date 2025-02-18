@@ -1,0 +1,18 @@
+private void btnPayActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        double amount = 0;
+        if(rbtnBeef.isSelected())
+            amount=4.00;
+        if(rbtnChicken.isSelected())
+            amount=3.50;
+        if(rbtnVeggie.isSelected())
+            amount=4.00;
+        
+        if(chkKetchup.isSelected())
+            amount+=0.50;
+        if(chkMustard.isSelected())
+            amount+=0.50;
+        if(chkPickles.isSelected())
+            amount+=0.50;
+        
+        JOptionPane.showMessageDialog(this,"Please pay this amount: $" + amount + " in the cashier\n Thank you ");
+    } 
